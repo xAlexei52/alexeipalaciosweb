@@ -1,0 +1,31 @@
+.glow-text {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  
+  input, textarea, button {
+    transition: all 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .fas {
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .md\:flex-row {
+      flex-direction: column;
+    }
+    
+    .md\:w-1\/2 {
+      width: 100%;
+    }
+  }

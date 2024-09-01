@@ -1,0 +1,25 @@
+<section id="projects" class="py-20 relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="blur-circle blur-circle-1"></div>
+      <div class="blur-circle blur-circle-2"></div>
+      <div class="blur-circle blur-circle-3"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <h2 class="text-4xl font-bold mb-12 text-center text-white glow-text">Proyectos Destacados</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let project of projects" class="glass-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 project-card">
+          <img [src]="project.image" [alt]="project.name" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-white">{{ project.name }}</h3>
+            <p class="text-gray-300 mb-4">{{ project.description }}</p>
+            <div class="flex justify-between items-center">
+              <a [href]="project.link" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors duration-300">Ver proyecto</a>
+              <div class="flex flex-wrap gap-2">
+                <span *ngFor="let tech of project.technologies" class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">{{ tech }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

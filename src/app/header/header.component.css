@@ -1,0 +1,56 @@
+header {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+header.scrolled {
+  background: rgba(17, 24, 39, 0.95);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+  max-width: 1200px;
+}
+
+nav a {
+  position: relative;
+  overflow: hidden;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #60A5FA;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 768px) {
+  .hidden {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.mobile-menu.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

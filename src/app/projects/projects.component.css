@@ -1,0 +1,21 @@
+.glow-text {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  
+  .project-card {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  .project-card:nth-child(1) { animation-delay: 0.1s; }
+  .project-card:nth-child(2) { animation-delay: 0.3s; }
+  .project-card:nth-child(3) { animation-delay: 0.5s; }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+  }
